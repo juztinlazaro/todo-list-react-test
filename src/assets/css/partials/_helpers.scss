@@ -2,6 +2,10 @@
   background: $primary !important;
 }
 
+._text-right {
+  text-align: right;
+}
+
 ._secondary-btn-outline {
   color: $secondary !important;
   border: 1px solid $secondary !important;

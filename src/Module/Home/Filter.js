@@ -19,7 +19,7 @@ class Filter extends Component {
           </NativeSelect>
         </Grid>
 
-        <Grid item xs={3}>
+        <Grid item xs={3} className="_text-right">
           <Button
             className="add-task-btn _primary-btn"
             color="primary"
