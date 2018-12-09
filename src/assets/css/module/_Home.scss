@@ -1,0 +1,193 @@
+.Home-section {
+  .heading-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+    font-size: 35px;
+  }
+
+  .add-task-btn {
+    margin-right: 20px;
+  }
+
+  .status-title {
+    margin-right: 20px;
+  }
+
+  .status-selection:before {
+    border: 0px;
+  }
+
+  .task-container .task-item {
+    border: 1px solid $sky;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    .item {
+      width: 100%;
+    }
+
+    &:hover {
+      background: $sky;
+    }
+  }
+
+  .task-container .active-item:hover {
+    background: transparent;
+  }
+
+  .task-container .day-title {
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .task-container .item-count-badge {
+    font-size: 12px;
+    background: lightgray;
+    padding: 7px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  .task-container .task-item .task-title {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .task-container .task-item .task-priority {
+    text-transform: uppercase;
+    background: $jade;
+    border-radius: 6px;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .task-container .task-item ._normalize-button {
+    margin-right: 5px;
+    color: #cdcdcd;
+    font-size: 15px;
+  }
+
+  .task-container .task-item .task-due-date {
+    color: $jade;
+    margin-left: 20px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .task-container .task-item .avatar-wrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .editable-items {
+    display: block;
+  }
+
+  .editable-items .option-items {
+    display: flex;
+    width: 100%;
+  }
+
+  .editable-items .option-wrapper {
+    width: 33.33333%;
+  }
+
+  .editable-items .option-wrapper .option-title {
+    display: block;
+  }
+
+  .editable-items .option-wrapper .reference-select {
+    min-width: 120px;
+    max-width: 300px;
+  }
+
+  .editable-items .option-wrapper .assignes-wrapper {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    &:hover .remove-assignee {
+      display: block;
+    }
+  }
+
+  .editable-items .option-wrapper .assignes-wrapper .remove-assignee {
+    position: absolute;
+    right: -18px;
+    top: 0px;
+    color: #000;
+    display: none;
+  }
+
+  .editable-items .option-wrapper .assignes-container .avatar-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .contacts .contact-title,
+  .description .description-title {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .contacts .contact-items .contact-item {
+    border: 1px solid $ash;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .contacts .contact-items .contact-item .info {
+    margin-bottom: 10px;
+  }
+
+  .contacts .contact-item .info .contact-name,
+  .contacts .contact-item .info .contact-mobile {
+    margin-right: 20px;
+  }
+
+  .contacts .contact-item .info .contact-position {
+    color: $ash;
+  }
+
+  .contacts .contact-action {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.contact.contact-action.action-buttons div {
+  padding: 10px;
+}
+
+.contact.contact-action.action-buttons button {
+  display: block;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $primary;
+  }
+}

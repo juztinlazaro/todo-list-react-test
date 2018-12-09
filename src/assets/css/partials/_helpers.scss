@@ -1,0 +1,23 @@
+._primary-btn {
+  background: $primary !important;
+}
+
+._secondary-btn-outline {
+  color: $secondary !important;
+  border: 1px solid $secondary !important;
+}
+
+._spacer {
+  margin-bottom: 15px;
+}
+
+._spacer-md {
+  margin-bottom: 30px;
+}
+
+._normalize-button {
+  background: transparent;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+}
