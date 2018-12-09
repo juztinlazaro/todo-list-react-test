@@ -24,6 +24,11 @@ class Task extends Component {
             onExpand={this.handleChange}
             expanded={this.state.expanded}
           />
+
+          <TaskItem
+            onExpand={this.handleChange}
+            expanded={this.state.expanded}
+          />
         </div>
       </section>
     );
