@@ -57,23 +57,23 @@ class TaskList extends Component {
     });
   };
   render() {
-    const { expanded } = this.props;
+    const { expanded, task } = this.props;
     const { anchorEl } = this.state;
 
     return (
       <section className="item">
         <ExpansionPanel
-          expanded={expanded === 'panel1'}
-          onChange={this.handleChange('panel1')}
+          expanded={expanded === task.id}
+          onChange={this.handleChange(task.id)}
           className={classnames('task-item', {
-            'active-item': expanded === 'panel1',
+            'active-item': expanded === task.id,
           })}
         >
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Grid container spacing={24}>
               <Grid item xs={10}>
-                <span className="task-title">Implement the task list</span>
-                <span className="task-priority">High Priority</span>
+                <span className="task-title">{task.title}</span>
+                <span className="task-priority">{task.priority}</span>
               </Grid>
 
               <Grid item xs={2}>
@@ -87,7 +87,7 @@ class TaskList extends Component {
 
                 <span className="task-due-date">
                   <i className="far fa-clock" />
-                  Dec 10
+                  {task.dueDate}
                 </span>
 
                 <div className="avatar-wrapper">
@@ -146,15 +146,23 @@ class TaskList extends Component {
 
             <section className="contacts _spacer-md">
               <span className="contact-title">Contacts</span>
-              <ContactItem
-                anchorEl={anchorEl}
-                handleClick={this.handleClick}
-                handleClose={this.handleClose}
-              />
+              <div className="contact-items">
+                {task.contacts.map(contact => {
+                  return (
+                    <ContactItem
+                      contact={contact}
+                      anchorEl={anchorEl}
+                      handleClick={this.handleClick}
+                      handleClose={this.handleClose}
+                    />
+                  );
+                })}
+              </div>
             </section>
 
             <section className="description">
               <span className="description-title">Description</span>
+              <button />
             </section>
           </ExpansionPanelDetails>
         </ExpansionPanel>

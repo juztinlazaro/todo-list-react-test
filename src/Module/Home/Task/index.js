@@ -13,22 +13,23 @@ class Task extends Component {
   };
 
   render() {
+    const { tasks } = this.props;
     return (
       <section className="task-container">
         <h2 className="day-title">
-          Today <span className="item-count-badge">13</span>
+          Today <span className="item-count-badge">{tasks.length}</span>
         </h2>
 
         <div className="task-items">
-          <TaskItem
-            onExpand={this.handleChange}
-            expanded={this.state.expanded}
-          />
-
-          <TaskItem
-            onExpand={this.handleChange}
-            expanded={this.state.expanded}
-          />
+          {tasks.map(task => {
+            return (
+              <TaskItem
+                task={task}
+                onExpand={this.handleChange}
+                expanded={this.state.expanded}
+              />
+            );
+          })}
         </div>
       </section>
     );

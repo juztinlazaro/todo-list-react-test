@@ -5,7 +5,7 @@ import taskReducer from './task/task.reducers';
 
 const rootReducers = combineReducers({
   blogs: blogReducer,
-  task: taskReducer,
+  tasks: taskReducer,
 });
 
 export default rootReducers;
