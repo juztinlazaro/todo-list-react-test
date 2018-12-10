@@ -24,6 +24,7 @@ class Task extends Component {
           {tasks.map(task => {
             return (
               <TaskItem
+                key={task.id}
                 task={task}
                 onExpand={this.handleChange}
                 expanded={this.state.expanded}

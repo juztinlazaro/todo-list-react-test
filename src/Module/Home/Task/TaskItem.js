@@ -59,7 +59,7 @@ class TaskList extends Component {
   render() {
     const { expanded, task } = this.props;
     const { anchorEl } = this.state;
-
+    const open = expanded === task.id;
     return (
       <section className="item">
         <ExpansionPanel
@@ -90,9 +90,22 @@ class TaskList extends Component {
                   {task.dueDate}
                 </span>
 
-                <div className="avatar-wrapper">
-                  <i className="fas fa-user-tie" />
-                </div>
+                {!open &&
+                  task.members.map(member => {
+                    if (member.avatar === '') {
+                      return (
+                        <div key={member.id} className="avatar-wrapper">
+                          <i className="fas fa-user-tie" />
+                        </div>
+                      );
+                    }
+
+                    return (
+                      <div key={member.id} className="avatar-wrapper">
+                        <img src={member.avatar} />
+                      </div>
+                    );
+                  })}
               </Grid>
             </Grid>
           </ExpansionPanelSummary>
@@ -150,6 +163,7 @@ class TaskList extends Component {
                 {task.contacts.map(contact => {
                   return (
                     <ContactItem
+                      key={contact.id}
                       contact={contact}
                       anchorEl={anchorEl}
                       handleClick={this.handleClick}

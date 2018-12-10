@@ -1,10 +1,3 @@
-import PrivateData from '@app/Module/PrivateData/PrivateData';
-
-const privateRoutes = [
-  {
-    path: '/private-data',
-    component: PrivateData,
-  },
-];
+const privateRoutes = [];
 
 export default privateRoutes;
